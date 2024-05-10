@@ -1,0 +1,66 @@
+.landing {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h6 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 24px;
+        background: linear-gradient(to right, #878bf7, white);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    h1 {
+        font-size: 48px;
+        font-weight: 500;
+        margin: 4px;
+
+        &.ai {
+            color: #0009d6;
+        }
+    }
+
+    .action {
+        margin-top: 48px;
+        display: flex;
+        gap: 24px;
+
+        .call {
+            padding: 10px 20px;
+            border-radius: 12px;
+            background: #9b9bab30;
+            font-size: 15px;
+            font-weight: 500;
+            border: none;
+            box-shadow: 0 5px 5px 0px rgba(0,0,0,0.25);
+            transition: all 0.3s ease-out;
+            cursor: pointer;
+
+            &:hover{                
+                background: #3237c0;
+                transform: scale(1.1);
+            }
+        }
+        .case {
+            padding: 10px 20px;
+            border-radius: 12px;
+            background: #9b9bab30;
+            font-size: 15px;
+            font-weight: 500;
+            border: none;
+            box-shadow: 0 5px 5px 0px rgba(0,0,0,0.25);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover{
+                background: #3237c0;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

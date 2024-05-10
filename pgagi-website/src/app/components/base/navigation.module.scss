@@ -1,0 +1,102 @@
+.navigation {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    transition: all 0.2s ease-out;
+
+    &.scrolled {
+        background: rgba(0, 0, 0, 0.611);
+    }
+
+    .banner {
+        width: 80%;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 15px 0 15px 0;
+        border-bottom: 1px solid #464646;
+        
+        a {
+            font-weight: 800;
+        }
+
+
+    }
+
+    .nav {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        cursor: pointer;
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 75px;
+                height: 75px;
+            }
+            p {
+                font-size: 18px;
+                font-weight: 800;
+                margin: 5px 0;
+                text-decoration: none;
+            }
+        }
+    
+        .links {
+            display: flex;
+            gap: 56px;
+            margin: 0 auto;
+
+            a {
+                position: relative;
+                font-size: 14px;
+                font-weight: 400;
+                padding: 16px 8px;
+                cursor: pointer;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 10px;
+                    width: calc(100% + 16px);
+                    display: block;
+                    height: 2px;
+                    background: linear-gradient(to right, #010afd, transparent);
+                    scale: 0;
+                    transition: all 0.5s ease;
+                    transform-origin: left;
+                }
+
+                &:hover {
+                    &::after {
+                        scale: 1;
+                    }
+                }
+            }
+        }
+    
+        .contact {
+            padding: 10px 20px;
+            border-radius: 12px;
+            background: #181818;
+            border: 1px solid #3237c0;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+
+            &:hover {                
+                background: #3237c0;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.partners {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 300px;
+
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #dfe0ff;
+        margin-bottom: 36px;
+    }
+
+    .partnerList {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 36px;
+
+        img {
+            width: auto;
+            height: 60px;
+
+            &:nth-child(1) {
+                filter: grayscale(10) brightness(250%);
+            }
+            &:nth-child(2) {
+                filter: grayscale(10) brightness(150%);
+            }
+            &:nth-child(3) {
+                filter: grayscale(10);
+            }
+            &:nth-child(4) {
+                filter: grayscale(10) brightness(150%);
+            }
+            &:nth-child(5) {
+                filter: grayscale(10) brightness(550%);
+            }
+        }
+    }
+}
