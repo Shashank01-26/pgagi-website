@@ -1,27 +1,23 @@
-'use client';
-
 import styles from "./calendly.module.scss";
 import { InlineWidget } from "react-calendly";
 import React, { useEffect, useRef } from 'react';
 
-export default function Calendly () {
+export default function Calendly() {
     const widgetRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleResize = () => {
-          const widgetElement = widgetRef.current;
-          if (widgetElement) {
-            const widgetHeight = widgetElement.offsetHeight;
-            widgetElement.style.height = `${widgetHeight}px`;
-          }
+            const widgetElement = widgetRef.current;
+            if (widgetElement) {
+                const widgetHeight = widgetElement.offsetHeight;
+                widgetElement.style.height = `${widgetHeight}px`;
+            }
         };
-    
+
         handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-      }, []);
-    
-
+    }, []);
 
     return (
         <section className={styles.calendly}>
@@ -32,7 +28,7 @@ export default function Calendly () {
                     <p>Let’s do it together!</p>
                 </div>
                 <div className={styles.widget} ref={widgetRef}>
-                    <InlineWidget url="https://calendly.com/srivastavashashank033/huddle" />
+                    <InlineWidget url="https://calendly.com/admin-quf_/30min" />
                 </div>
             </div>
         </section>

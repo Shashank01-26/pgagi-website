@@ -12,15 +12,16 @@
     }
 
     .banner {
-        width: 80%;
+        width: 100%;
         text-align: center;
         font-size: 16px;
         font-weight: 400;
-        padding: 15px 0 15px 0;
-        border-bottom: 1px solid #464646;
+        padding: 10px 0 6px 0;
+        background: #040AA3;
         
         a {
             font-weight: 800;
+            text-decoration: none;
         }
 
 
@@ -30,22 +31,28 @@
         width: 80%;
         display: flex;
         align-items: center;
-        margin-top: 5px;
+        margin-top: 30px;
         cursor: pointer;
+        transition: opacity 0.1s ease-in-out, visibility 0s 0.1s;
+
+        &.navHidden {
+            opacity: 0;
+            visibility: hidden;
+        }
 
         .logo {
             display: flex;
             flex-direction: column;
+            text-decoration: none;
 
             img {
-                width: 75px;
-                height: 75px;
+                width: 60px;
+                height: 60px;
             }
             p {
-                font-size: 18px;
-                font-weight: 800;
-                margin: 5px 0;
-                text-decoration: none;
+                font-size: 12px;
+                font-weight: 900;
+                margin: 5px 0px 0px 8px;
             }
         }
     
@@ -58,14 +65,14 @@
                 position: relative;
                 font-size: 14px;
                 font-weight: 400;
-                padding: 16px 8px;
+                padding: 2px 8px 0px 8px;
                 cursor: pointer;
 
                 &::after {
                     content: '';
                     position: absolute;
-                    left: 0;
-                    bottom: 10px;
+                    left: 8px;
+                    bottom: -1px;
                     width: calc(100% + 16px);
                     display: block;
                     height: 2px;
@@ -81,6 +88,78 @@
                     }
                 }
             }
+            .dropdownContainer{
+                position: relative;
+                height: 100%;
+
+                .dropdownContent{
+                    display: none;
+                    position: absolute;
+                    background-color: linear-gradient(to right, #010afd, transparent);
+                    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+                    z-index: 1;
+                    min-width: 200px;
+
+                    li{
+                        padding: 18px 16px 12px 12px;
+                        text-decoration: none;
+                        display: block;
+
+                        &:hover{
+                            border-radius: 8px;
+                            background: rgba(144, 181, 182, 0.411);
+
+                            &::after {
+                                content: " ➤"; // Unicode right arrow character
+                                position: absolute;
+                                top: 50%;
+                                right: 8px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+
+                &:hover .dropdownContent{
+                    display: block;
+                }
+                .solutionsContent{
+                    display: grid;
+                    top: 0;
+                    grid-template-columns: repeat(3, 1fr);
+                    // column-gap: 20px; 
+                    position: absolute;
+                    left: 100%; // Position to the right of the dropdownContent
+                    width: 100%; // Occupy full width
+                    // padding: 12px; 
+                    background-color: linear-gradient(to right, #010afd, transparent);
+                    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+                    z-index: 1;
+                    min-width: 250px;
+
+                    li{
+                        padding: 18px 16px 12px 12px;
+                        text-decoration: none;
+                        display: block;
+
+                        &:hover{
+                            border-radius: 8px;
+                            background: rgba(144, 181, 182, 0.411);
+
+                            &::after {
+                                content: " ➤"; // Unicode right arrow character
+                                position: absolute;
+                                top: 50%;
+                                right: 8px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    &:hover .solutionsContent{
+                        display: grid;
+                    }
+               }
+            }            
         }
     
         .contact {
@@ -94,7 +173,7 @@
             transition: all 0.3s ease-out;
 
             &:hover {                
-                background: #3237c0;
+                background: linear-gradient(90deg, #050CAF 0%, #070A5D 100%);
                 transform: scale(1.1);
             }
         }

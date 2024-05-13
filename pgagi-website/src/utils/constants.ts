@@ -40,7 +40,7 @@ export const trendingList = [
 
 export const segmentList = [
   {
-    title: 'Here’s How We Make Our Products Grow',
+    title: 'Here’s How We Make Your Products Grow',
   },
   {
     title: 'Discover & Feasibility',
@@ -71,12 +71,11 @@ export const segmentList = [
 export const links = [
   'About Us',
   'Blog',
-  'Github',
-  'Free Products',
+  
 ]
 
 export const resources = [
-  'MIT License',
+  
   'Terms & Conditions',
   'Privacy Policy',
   'Contact Us',

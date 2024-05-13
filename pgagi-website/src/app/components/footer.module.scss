@@ -1,6 +1,6 @@
 .footer {
     position: relative;
-    height: 480px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     padding: 0 100px;
@@ -22,16 +22,16 @@
     
             .logo {
                 display: flex;
-                flex-direction: column;
+                flex-direction: column;                
         
                 img {
-                    width: 75px;
-                    height: 75px;
+                    width: 65px;
+                    height: 65px;
                 }
                 p {
-                    font-size: 18px;
+                    font-size: 14px;
                     font-weight: 800;
-                    margin: 8px 0;
+                    margin: 1px 0px 0px 8px;                    
                 }
             }
     
@@ -39,7 +39,7 @@
                 position: relative;
                 display: flex;
                 gap: 8px;
-    
+
                 div {
                     width: 45px;
                     height: 45px;
@@ -49,10 +49,16 @@
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
+                    
+                    &:hover {
+                        background:linear-gradient(90deg, #050CAF 0%, #070A5D 100%);
+                    }
     
                     img {
                         width: 24px;
                         height: auto;
+                        // transition: filter 0.3s ease; // Smooth transition for hover effect
+                    
                     }
                 }
             }

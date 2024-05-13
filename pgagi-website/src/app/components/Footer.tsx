@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from '../assets/logo.png'
+import Link from "next/link";
 import { links, resources, socialList } from "@/utils/constants";
 
 import styles from "./footer.module.scss";
@@ -10,8 +11,10 @@ export default function Footer () {
             <div className={styles.wrapper}>
                 <div className={styles.brand}>
                     <div className={styles.logo}>
+                        <Link href='/'>
                         <Image src={logo} alt='Logo' />
                         <p>PG-AGI</p>
+                        </Link>
                     </div>
                     <div className={styles.social}>
                         {
