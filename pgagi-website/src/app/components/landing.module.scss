@@ -20,9 +20,11 @@
         font-weight: 500;
         margin: 4px;
 
-        &.ai {
-            color: #0009d6;
+        &.ai{
+            display: inline-block;
+            color: #0051ff 
         }
+       
     }
 
     .action {

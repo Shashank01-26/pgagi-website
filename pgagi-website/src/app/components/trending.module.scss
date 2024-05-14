@@ -29,7 +29,7 @@
 
         .trendingItem {
             position: relative;
-            min-width: 300px;
+            min-width: 400px;
             height: 450px;
             border-radius: 16px;
             overflow: hidden;
@@ -48,10 +48,10 @@
                 opacity: 0.5;
             }
 
-            h3 {
+            h2 {
                 position: relative;
                 color: white;
-                font-size: 18px;
+                font-size: 25px;
                 font-weight: 600;
                 text-transform: uppercase;
                 margin: 0;
@@ -67,10 +67,10 @@
             }
 
             &:first-child {
-                margin-left: 70px;
+                margin-left: 35px;
             }
             &:last-child {
-                margin-right: 70px;
+                margin-right: 35px;
             }
         }
     }

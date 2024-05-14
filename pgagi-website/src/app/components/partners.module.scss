@@ -6,7 +6,7 @@
     padding-top: 30px;
 
     h3 {
-        font-size: 18px;
+        font-size: 25px;
         font-weight: 600;
         color: #dfe0ff;
         margin-bottom: 36px;
@@ -21,7 +21,7 @@
 
         img {
             width: auto;
-            height: 80px;
+            height: 70px;
 
             &:nth-child(1) {
                 filter: grayscale(10) brightness(250%);
@@ -30,13 +30,14 @@
                 filter: grayscale(10) brightness(150%);
             }
             &:nth-child(3) {
-                filter: grayscale(10);
-            }
-            &:nth-child(4) {
                 filter: grayscale(10) brightness(150%);
             }
+            &:nth-child(4) {
+                filter: grayscale(10) brightness(200%);
+            }
             &:nth-child(5) {
-                filter: grayscale(10) brightness(550%);
+                filter: grayscale(10) brightness(650%);
+                height: 50px;
             }
         }
     }

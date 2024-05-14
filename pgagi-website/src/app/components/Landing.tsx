@@ -1,3 +1,4 @@
+import { TypeAnimation } from 'react-type-animation';
 import React, { useState } from 'react';
 import styles from "./landing.module.scss";
 import Typewriter from 'typewriter-effect';
@@ -21,15 +22,25 @@ export default function Landing () {
             <h6>Start your AI journey with us</h6>
             <h1>Your Go-To AI Consultancy For</h1>
             <h1 className={styles.ai}>
-                <Typewriter
-                options={{
-                    strings: ['AI Products', 'AI Solutions', 'AI MVP Design', 'AI Research', 'Idea Validation'],
-                    autoStart: true,
-                    loop:true,
-                }}
-                />
+            <TypeAnimation
+                        sequence={[
+                                    "AI MVP Design",
+                                    1000,
+                                    ' AI Research',
+                                    1000,
+                                    ' Idea Validation',
+                                    1000,
+                                    "AI Solutions",
+                                    1000,
+                                    "AI Products",
+                                    1000
+                                ]}
+                                wrapper="span"
+                                speed={50}
+                                // style={{ display: 'inline-block', color: 'red' }}
+                                repeat={Infinity}
+                            />
             </h1>
-
             <div className={styles.action}>
                 <button className={styles.call} onClick={handleBookCall}>Book a call</button>
                 <button className={styles.case}>See Case Studies</button>

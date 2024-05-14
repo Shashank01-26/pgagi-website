@@ -1,8 +1,8 @@
 import ais from '../assets/partners/ais.png'
 import hx from '../assets/partners/hx.png'
-import social from '../assets/partners/social.png'
-import ciek from '../assets/partners/ciek.png'
-import aixl from '../assets/partners/aixl.png'
+import social from '../assets/partners/social27.png'
+import ciek from '../assets/partners/ciek2.png'
+import aixl from '../assets/partners/aixl2.png'
 
 import Image from "next/image";
 

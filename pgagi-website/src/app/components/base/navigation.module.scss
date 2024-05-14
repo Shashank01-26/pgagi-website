@@ -33,7 +33,7 @@
         align-items: center;
         margin-top: 30px;
         cursor: pointer;
-        transition: opacity 0.1s ease-in-out, visibility 0s 0.1s;
+        transition: opacity 0.1s ease-in-out, visibility 0s 0.3s;
 
         &.navHidden {
             opacity: 0;
@@ -67,6 +67,7 @@
                 font-weight: 400;
                 padding: 2px 8px 0px 8px;
                 cursor: pointer;
+                text-decoration: none;
 
                 &::after {
                     content: '';

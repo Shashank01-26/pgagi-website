@@ -7,12 +7,12 @@ import { trendingList } from "@/utils/constants";
 export default function Trending () {
     const trending = useRef<HTMLDivElement>(null);
 
-    const scrollLeft = () => {
-		if (trending.current) trending.current.scrollLeft -= 400;
-	};
-	const scrollRight = () => {
-		if (trending.current) trending.current.scrollLeft += 400;
-	};
+    // const scrollLeft = () => {
+	// 	if (trending.current) trending.current.scrollLeft -= 400;
+	// };
+	// const scrollRight = () => {
+	// 	if (trending.current) trending.current.scrollLeft += 400;
+	// };
 
     return (
         <section className={styles.trending}>
@@ -31,10 +31,10 @@ export default function Trending () {
                     ))
                 }
             </div>
-            <div className={styles.action}>
+            {/* <div className={styles.action}>
                 <span onClick={scrollLeft}>{'<'}</span>
                 <span onClick={scrollRight}>{'>'}</span>
-            </div>
+            </div> */}
         </section>
     )
 }
