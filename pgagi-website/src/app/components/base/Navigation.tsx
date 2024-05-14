@@ -4,10 +4,12 @@ import styles from "./navigation.module.scss";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { whatWeDoLinks } from "@/utils/constants";
 
 export default function Navigation() {
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const [navbarVisible, setNavbarVisible] = useState(true);
+    const [whatWeDo, setWhatWeDo] = useState<'solutions' | 'industries' | 'caseStudy'>('solutions');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -37,7 +39,24 @@ export default function Navigation() {
                     <p>PG-AGI</p>
                 </Link>
                 <div className={styles.links}>
-                    <a>What we do</a>
+                    <div className={styles.whatWeDo}>
+                        <a>What we do</a>
+                        <div className={styles.dropdown}>
+                            <div className={styles.content}>
+                                <span className={styles.background} />
+                                <div className={styles.menu}>
+                                    <span className={whatWeDo === 'solutions' ? styles.active : ''} onClick={() => setWhatWeDo('solutions')}>Solutions</span>
+                                    <span className={whatWeDo === 'industries' ? styles.active : ''} onClick={() => setWhatWeDo('industries')}>Industries</span>
+                                    <span className={whatWeDo === 'caseStudy' ? styles.active : ''} onClick={() => setWhatWeDo('caseStudy')}>Case Study</span>
+                                </div>
+                                <div className={styles.dropdownLinks}>
+                                    {
+                                        whatWeDoLinks[whatWeDo].map((link, index) => <a key={index}>{link}</a>)
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a>What we think</a>
                     <a href="https://pgagi.in/aboutus">Who we are</a>
                 </div>
